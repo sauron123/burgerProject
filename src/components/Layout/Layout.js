@@ -1,11 +1,12 @@
 import React from 'react';
 import Aux from '../../HOC/Aux';
 import {css} from 'emotion';
+import  Toolbar from '../Navigation/Toolbar/Toolbar';
 
 const layout = (props) => (
 
     <Aux>
-        <div>Toolbar,sideDrawer,Backdrop</div>
+        <div><Toolbar/> sideDrawer,Backdrop</div>
         <main className={css(styleMain)}>
 
             {props.children}
@@ -17,5 +18,5 @@ const layout = (props) => (
 export default layout;
 
 const styleMain = {
-    marginTop: '16px',
+    marginTop: '72px',
 };
