@@ -42,7 +42,7 @@ class BurgerBuilder extends Component {
 
                 return ingredients[igKey]
             })
-            .reduce((sum,el) => {
+            .reduce((sum, el) => {
 
                 return sum + el;
             }, 0);
@@ -86,7 +86,7 @@ class BurgerBuilder extends Component {
     };
 
     purchaseHandler = () => {
-       this.setState({purchasing: true});
+        this.setState({purchasing: true});
     };
 
     purchaseCancelHandler = () => {
@@ -94,7 +94,7 @@ class BurgerBuilder extends Component {
     };
 
     purchaseContinueHandler = () => {
-        alert ('you continue')
+        alert('you continue')
     };
 
     render() {
@@ -110,21 +110,21 @@ class BurgerBuilder extends Component {
             <Aux>
 
                 <Modal show={this.state.purchasing}
-                       modalClosed = {this.purchaseCancelHandler}
+                       modalClosed={this.purchaseCancelHandler}
                 >
-                <OrderSmmury ingredients={this.state.ingredients}
-                             price ={this.state.totalPrice.toFixed(2)}
-                                purchaseCancelled = {this.purchaseCancelHandler}
-                               purchaseContinued ={this.purchaseContinueHandler}
+                    <OrderSmmury ingredients={this.state.ingredients}
+                                 price={this.state.totalPrice.toFixed(2)}
+                                 purchaseCancelled={this.purchaseCancelHandler}
+                                 purchaseContinued={this.purchaseContinueHandler}
 
-                />
+                    />
                 </Modal>
                 <Burger ingredients={this.state.ingredients}/>
                 <BuildControls ingredientAdded={this.addIngredientHandler}
                                ingredientRemoved={this.removeIngredientHandler}
                                disabled={disabledInfo}
                                purchasable={this.state.purchasable}
-                               ordered = {this.purchaseHandler}
+                               ordered={this.purchaseHandler}
                                price={this.state.totalPrice}
 
                 />

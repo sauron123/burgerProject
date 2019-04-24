@@ -1,11 +1,14 @@
 import React from 'react';
+import { css } from 'emotion';
+import NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
+
+
 
 const navigationItems =() => (
 
-
-
-    <ul>
-
+    <ul className={css(itemsStyle)}>
+        <NavigationItem link="/"> Burger Builder</NavigationItem>
+        <NavigationItem link="/"> Checkout Page </NavigationItem>
     </ul>
 );
 
@@ -21,6 +24,6 @@ const itemsStyle ={
     listStyle: 'none',
     display: 'flex',
     alignItems: 'center',
-    height: '100%'
+    height: '100%',
 
 };

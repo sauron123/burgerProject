@@ -1,24 +1,21 @@
 import React from 'react';
 import { css } from 'emotion';
 import Logo from '../../Logo/Logo';
+import  NavigationItems from '../NavigationItems/NavigationItems';
+import SideDrawerToggle from '../SideDrawer/DrawerToggle/SideDrawerToggle'
 
 
 const toolbar = (props) => (
 
     <header className={css(toolbarSTYLE)}>
 
-        <div> MENU</div>
+      <SideDrawerToggle clicked = {props.drawerToggleClicked}/>
         <Logo/>
         <nav>
-
-            ...
+        <NavigationItems/>
         </nav>
     </header>
-
-
-
-
-)
+);
 
 export default toolbar;
 

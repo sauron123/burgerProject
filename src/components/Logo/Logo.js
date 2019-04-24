@@ -5,7 +5,7 @@ import { css } from 'emotion';
 
 const logo = (props) => (
 
-    <div className={css(logoStyle)}>
+    <div className={css(logoStyle)} style={{height: props.height}}>
 
         <img className={css(imagStyle)} src={burgerLogo} alt="MyBurger" />
     </div>
@@ -19,7 +19,7 @@ export default logo;
 const logoStyle ={
     backgroundColor: 'white',
     padding: '8px',
-    height: '80%',
+    height: '100%',
     boxSizing: 'border-box',
     borderRadius: '5px'
 
